@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copier le reste du code de l'application
 COPY . .
 
-# Le port sera exposé par Railway via la variable $PORT
-# La commande de démarrage sera définie dans le Procfile
+# Exposer le port que Railway utilisera
+EXPOSE 8000
+
+# Commande pour lancer l'application. Railway injectera la variable $PORT.
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT
