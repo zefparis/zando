@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-selfcheck.json
+.env
+
+# Node
+node_modules/
+npm-debug.log
+# Fichiers uploadés localement
+/backend/uploads/
